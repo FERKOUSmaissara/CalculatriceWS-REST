@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element -->
+  <xs:element name="contacts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="contact" type="contactType" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Contact type -->
+  <xs:complexType name="contactType">
+    <xs:sequence>
+      <xs:element name="firstName" type="xs:string"/>
+      <xs:element name="lastName"  type="xs:string"/>
+      <xs:element name="phone"     type="phoneType"/>
+      <xs:element name="address"   type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Phone type -->
+  <xs:complexType name="phoneType">
+    <xs:sequence>
+      <xs:element name="number" type="xs:string"/>
+      <xs:element name="type"   type="phoneKind"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Restriction: phone kind can only be work, mobile, or home -->
+  <xs:simpleType name="phoneKind">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="work"/>
+      <xs:enumeration value="mobile"/>
+      <xs:enumeration value="home"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

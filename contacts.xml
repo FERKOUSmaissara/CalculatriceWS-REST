@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<contacts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="contacts.xsd">
+
+  <contact>
+    <firstName>Laura</firstName>
+    <lastName>Mitchell</lastName>
+    <phone>
+      <number>+1-202-555-0101</number>
+      <type>work</type>
+    </phone>
+    <address>1450 North Lake St, Springfield, IL 62701</address>
+  </contact>
+
+  <contact>
+    <firstName>Daniel</firstName>
+    <lastName>Rivera</lastName>
+    <phone>
+      <number>+1-202-555-0142</number>
+      <type>mobile</type>
+    </phone>
+    <address>88 Cedar Avenue, Austin, TX 73301</address>
+  </contact>
+
+  <contact>
+    <firstName>Emma</firstName>
+    <lastName>Thompson</lastName>
+    <phone>
+      <number>+1-202-555-0187</number>
+      <type>home</type>
+    </phone>
+    <address>512 Willow Drive, Denver, CO 80014</address>
+  </contact>
+
+  <contact>
+    <firstName>James</firstName>
+    <lastName>Carter</lastName>
+    <phone>
+      <number>+1-312-555-0209</number>
+      <type>mobile</type>
+    </phone>
+    <address>77 Maple Road, Chicago, IL 60601</address>
+  </contact>
+
+</contacts>
