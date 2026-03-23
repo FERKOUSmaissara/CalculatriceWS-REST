@@ -7,7 +7,7 @@
 
     <endpoint
         name="calculatrice"
-        implementation="org.nanterreU.fr.ws.CalculatriceImpl"
+        implementation="org.nanterreU.fr.ws.CalculatriceService"
         url-pattern="/ws/calculatrice" />
 
 </endpoints>

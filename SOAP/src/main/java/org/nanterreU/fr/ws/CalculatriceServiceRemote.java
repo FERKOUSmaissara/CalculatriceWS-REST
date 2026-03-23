@@ -1,15 +1,18 @@
 package org.nanterreU.fr.ws;
 
+import javax.ejb.Remote;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
 /**
- * Interface du service SOAP (SEI = Service Endpoint Interface).
- * Déclare les opérations disponibles.
+ * Interface SEI (Service Endpoint Interface) du service SOAP Calculatrice.
+ * @Remote  -> interface EJB accessible à distance
+ * @WebService -> déclare les opérations SOAP
  */
-@WebService(name = "ICalculatrice", targetNamespace = "http://ws.fr.nanterreU.org/")
-public interface ICalculatrice {
+@Remote
+@WebService(name = "CalculatriceServiceRemote", targetNamespace = "http://ws.fr.nanterreU.org/")
+public interface CalculatriceServiceRemote {
 
     @WebMethod
     double additionner(@WebParam(name = "a") double a,

@@ -5,7 +5,7 @@ import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
-import org.nanterreU.fr.ws.ICalculatrice;
+import org.nanterreU.fr.ws.CalculatriceServiceRemote;
 
 /**
  * Client SOAP simple pour tester le service CalculatriceService.
@@ -27,7 +27,7 @@ public class CalculatriceClient {
         QName serviceName = new QName("http://ws.fr.nanterreU.org/", "CalculatriceService");
 
         Service service = Service.create(wsdlUrl, serviceName);
-        ICalculatrice calc = service.getPort(ICalculatrice.class);
+        CalculatriceServiceRemote calc = service.getPort(CalculatriceServiceRemote.class);
 
         System.out.println("=== Test du service SOAP Calculatrice ===");
         System.out.println("10 + 5   = " + calc.additionner(10, 5));

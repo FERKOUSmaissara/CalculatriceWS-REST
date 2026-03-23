@@ -1,22 +1,23 @@
 package org.nanterreU.fr.ws;
 
+import javax.ejb.Stateless;
 import javax.jws.WebService;
 
 /**
  * Implémentation du service SOAP Calculatrice.
  *
- * @WebService(endpointInterface) dit à JAX-WS d'utiliser l'interface ICalculatrice
- * pour générer le WSDL automatiquement.
- *
- * Pas besoin de @Stateless, on est sur Tomcat (pas WildFly).
+ * @Stateless  -> EJB sans état (Tomcat ignore cette annotation à l'exécution,
+ *               mais elle est requise pour respecter le modèle EJB JAX-WS)
+ * @WebService -> expose cette classe comme service SOAP, le WSDL est généré automatiquement
  */
+@Stateless
 @WebService(
     serviceName       = "CalculatriceService",
     portName          = "CalculatricePort",
-    endpointInterface = "org.nanterreU.fr.ws.ICalculatrice",
+    endpointInterface = "org.nanterreU.fr.ws.CalculatriceServiceRemote",
     targetNamespace   = "http://ws.fr.nanterreU.org/"
 )
-public class CalculatriceImpl implements ICalculatrice {
+public class CalculatriceService implements CalculatriceServiceRemote {
 
     @Override
     public double additionner(double a, double b) {
