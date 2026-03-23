@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fichier de configuration JAX-WS RI.
+  Déclare quels endpoints SOAP sont exposés et à quelle URL.
+-->
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+
+    <endpoint
+        name="calculatrice"
+        implementation="org.nanterreU.fr.ws.CalculatriceImpl"
+        url-pattern="/ws/calculatrice" />
+
+</endpoints>
