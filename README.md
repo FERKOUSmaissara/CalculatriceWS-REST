@@ -125,14 +125,57 @@ Méthodes :
 ### 🔹 Endpoint SOAP
 
 ```
-http://localhost:8080/.../ws/calculatrice
+http://localhost:8080/CalculatriceSOAP/ws/calculatrice
 ```
 
 WSDL :
 
 ```
-http://localhost:8080/.../ws/calculatrice?wsdl
+http://localhost:8080/CalculatriceSOAP/ws/calculatrice?wsdl
 ```
+
+---
+
+## 🔗 URLs de test (REST + SOAP)
+
+### REST
+
+* `GET http://localhost:8080/CalculatriceREST/rest/hello` (text/plain)
+* `GET http://localhost:8080/CalculatriceREST/rest/hello` avec `Accept: text/xml`
+* `GET http://localhost:8080/CalculatriceREST/rest/hello` avec `Accept: text/html`
+* `GET http://localhost:8080/CalculatriceREST/rest/todos` (JSON)
+* `GET http://localhost:8080/CalculatriceREST/rest/todos/1` (JSON)
+* `POST http://localhost:8080/CalculatriceREST/rest/todos`
+
+### SOAP
+
+* Endpoint : `http://localhost:8080/CalculatriceSOAP/ws/calculatrice`
+* WSDL : `http://localhost:8080/CalculatriceSOAP/ws/calculatrice?wsdl`
+
+---
+
+## ▶️ Explication pour lancer le projet
+
+### 1. Lancer REST
+
+1. Ouvrir un terminal dans le dossier `REST`
+2. Compiler et packager : `mvn clean package`
+3. Copier `REST/target/CalculatriceREST.war` dans `tomcat/webapps/`
+4. Démarrer Tomcat
+5. Tester : `http://localhost:8080/CalculatriceREST/rest/hello`
+
+### 2. Lancer SOAP
+
+1. Ouvrir un terminal dans le dossier `SOAP`
+2. Compiler et packager : `mvn clean package`
+3. Copier `SOAP/target/CalculatriceSOAP.war` dans `tomcat/webapps/`
+4. Démarrer Tomcat (ou redémarrer si déjà lancé)
+5. Vérifier le WSDL : `http://localhost:8080/CalculatriceSOAP/ws/calculatrice?wsdl`
+
+### 3. Tester le client SOAP
+
+* Lancer la classe `ClientMain` dans le dossier `ClientWS`
+* Ou lancer la classe `CalculatriceClient` dans le dossier `SOAP`
 
 ---
 
