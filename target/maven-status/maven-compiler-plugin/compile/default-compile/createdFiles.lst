@@ -1,8 +1,0 @@
-org\nanterreU\fr\ws\CalculatriceService.class
-org\nanterreU\fr\ws\HelloService.class
-rest\first\HelloWorldResource.class
-rest\first\client\Test.class
-org\nanterreU\fr\ws\CalculatriceServiceRemote.class
-rest\todo\resource\TodoResource.class
-rest\todo\dao\TodoDao.class
-rest\todo\model\Todo.class

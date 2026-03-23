@@ -1,0 +1,23 @@
+# Dossiers générés par Maven (ne pas versionner)
+target/
+
+# Fichiers compilés Java
+*.class
+
+# Dossier bin d'Eclipse
+bin/
+
+# Fichiers IDE Eclipse
+.classpath
+.project
+.settings/
+
+# Fichiers IDE IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
